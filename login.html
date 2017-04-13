@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<!-- <link rel="stylesheet" href="css/base.css"> -->
+	<title>登录</title>
+</head>
+<style>
+	body{
+		background: url(img/brickwall.png);
+		margin: 0;
+		padding: 0;
+	}
+	.center-box{
+		width: 980px;
+		margin:0 auto;
+	}
+	#head>.center-box>a{
+		display: block;
+		width: 330px;
+		height: 98px;
+	}
+	#head>.center-box>a>img{
+		margin-top: 37px;
+		padding-left: 50px;
+	}
+	#body>.center-box{
+		overflow: hidden;
+	}
+	#body>.center-box>.body-left{
+		float: left;
+	}
+	#body>.center-box>.body-right{
+		float: right;
+		width: 392px;
+   		height: 448px;
+    	border: 1px solid #d8d8d8;
+    	background: #fff;
+    	overflow: hidden;
+	}
+	#body>.center-box>.body-right>div{
+		padding: 25px 22px 21px;
+		text-align: center;
+	}
+	#body>.center-box>.body-right>div>p{
+		font-size: 16px;
+		font-weight: 400;
+		color: #333;
+		margin: 0;
+		padding-bottom: 20px;
+	}
+	#body>.center-box>.body-right>div>span{
+		display: block;
+		background: url(img/faster_line.jpg) center center no-repeat;
+		font-size: 12px;
+		color: #ccc;
+		/*margin-bottom: 17px;*/
+	}
+	#body>.center-box>.body-right>div>input{
+		border: 1px solid #c0c0c0;
+		border-radius: 5px;
+		height: 46px;
+		width: 346px;
+		line-height: 46px;
+		margin-bottom: 10px;
+		font-size: 16px;
+		padding-left: 15px;
+	}
+	#body>.center-box>.body-right>div>p>a{
+		color: #000;
+		text-decoration: none;
+		font-size: 12px;
+	}
+	#body>.center-box>.body-right>div>p>a:hover{
+		text-decoration: underline;
+	}
+	.denglu{
+		background-color: #343434;
+		color: #fff;
+		cursor: pointer;
+	}
+	.denglu:hover{
+		background-color: #000;
+	}
+	.three{
+		padding-left: 10px;
+	}
+	.three>a{
+		display: inline-block;
+		background: url(img/three_logo.gif);
+		width: 36px;
+		height: 36px;
+		margin-right: 16px;
+	}
+</style>
+<body>
+	<div id="head">
+		<div class="center-box">
+			<a href=""><img src="img/login_logo.jpg" alt=""></a>
+		</div>
+	</div>
+	<div id="body">
+		<div class="center-box">
+			<div class="body-left">
+				<a href=""><img src="img/login_left_pic_03.jpg" alt=""></a>
+			</div>
+			<div class="body-right">
+				<div>
+					<p>账户登录</p>
+					<span>使用想去账号登录</span><br>
+					<input type="text" placeholder="请输入手机号或邮箱">
+					<input type="password" placeholder="请输入密码">
+					<p style="text-align: right;padding-bottom: 5px;"><a href="">忘记密码》</a></p>
+					<input type="submit" class="denglu" value="登陆"><br>
+					<span style="margin-bottom: 17px;">使用社交账号登录</span>
+					<p class="three"><a href=""></a><a href="" style="background-position: -52px 0;"></a><a href="" style="background-position: -105px 0;"></a></p>
+					<p style="color: #ccc;font-size: 12px;margin-top: 30px;">还没有账号？<a href="">立即注册》</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

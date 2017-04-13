@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>寻味地图香水</title>
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/home.css">
+</head>
+<style>
+	/*商品头*/
+	#goodshead>.center-box{
+    border-bottom: 1px solid #e0e0e0;
+    overflow: hidden;
+    padding-bottom: 30px;
+	}
+	#goodshead>.center-box>.fl{
+	width: 50px;
+    text-align: center;
+    padding: 40px 0 0;
+	}
+	#goodshead>.center-box>.fl>a>img{
+	display: block;
+    margin: 0 auto;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+	}
+	#goodshead>.center-box>.fr{
+	width: 910px;
+    overflow: hidden;
+	}
+	#goodshead>.center-box>.fr>p:first-child{
+		font-size: 20px;
+   		padding-top: 40px;
+   		font-weight: 400;
+	}
+	#goodshead>.center-box>.fr>p>a{
+		color: #000;
+	}
+	#goodshead>.center-box>.fr>p>a:hover{
+		text-decoration: underline;
+	}
+	/*商品主体*/
+	#goodsbody .center-box{
+		padding: 30px 0;
+	}
+	#goodsbody>.center-box>.fl{
+		width: 600px;
+		height: 600px;
+		background: url(img/FnpZ_xseucOQquKKRjPJluzvOE5M.jpg) center center no-repeat;
+		position: relative;
+	}
+	#goodsbody>.center-box>.fl>div{
+		position: absolute;
+		top: 16px;
+		right: 18px;
+		background-color: rgba(255,255,255,0.5);
+		width: 121px;
+		height: 54px;
+		border-radius: 32px;
+		line-height: 54px;
+	}
+	#goodsbody>.center-box>.fl>div>a{
+		display:block;
+		margin-left: 22px;
+		margin-top: 11px;
+		width: 32px;
+		height: 32px;
+		background: url(img/like.png) -9px -59px no-repeat;
+	}
+	#goodsbody>.center-box>.fl>div>span{
+		font-size: 17.5px;
+		line-height: 54px;
+		padding-left: 10px;
+	}
+	#goodsbody>.center-box>.fr>h2{
+		width: 340px;
+		font-weight: 400;
+		font-size: 18px;
+		margin-bottom: 12px;
+	}
+	#goodsbody>.center-box>.fr>table tr>td{
+		/*display: block;*/
+		padding-bottom: 12px;
+		font-size: 16px;
+	}
+	#goodsbody>.center-box>.fr>table tr>td:nth-child(2){
+		padding-left: 38px;
+	}
+	#goodsbody>.center-box>.fr>p{
+		margin-bottom: 12px;
+		font-size: 16px;
+	}
+	#goodsbody>.center-box>.fr>a{
+		display: block;
+		padding: 6px;
+		line-height: 24px;
+		font-size: 16px;
+		border: 1px solid #999;
+		color: #000;
+		width: 5em;
+		text-align: center;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		margin-bottom: 12px;
+		position: relative;
+		height: 40px;
+	}
+	#goodsbody>.center-box>.fr>a>div{
+		position: absolute;
+		top: 0;
+		right: 0;
+		background-color: #000;
+		color: #fff;
+		width: 7px;
+		height: 7px;
+		display: none;
+	}
+	#goodsbody>.center-box>.fr>a:hover{
+		border: 2px solid #000;
+		line-height: 22px;
+	}
+	#goodsbody>.center-box>.fr>a:hover div{
+		display: block;
+	}
+	#goodsbody>.center-box>.fr>div{
+		height: 31px;
+	}
+	#goodsbody>.center-box>.fr>div>a{
+		display: inline-block;
+		width: 36px;
+		height: 29px;
+		text-align: center;
+		line-height: 29px;
+		font-size: 20px;
+		font-weight: 700;
+		color: #000;
+		border: 2px solid #000;
+	}
+	#goodsbody>.center-box>.fr>div>span:nth-child(2){
+		display: inline-block;
+		width: 45px;
+		text-align: center;
+		line-height: 29px;
+		border: 1px solid #ccc;
+		border-top: 2px solid #000;
+		border-bottom: 2px solid #000;
+		font-size: 20px;
+		margin: 0 -5px;
+	}
+	#goodsbody>.center-box>.fr>div>span:nth-child(4){
+		font-size: 12px;
+		color: #ccc;
+		padding-left: 12px;
+	}
+	#goodsbody>.center-box>.fr>h3{
+		margin-top: 28px;
+		font-size: 22px;
+	}
+	#goodsbody>.center-box>.fr>h3>span:nth-child(2){
+		color: #ccc;
+		text-decoration: line-through;
+		font-size: 20px;
+	}
+	#goodsbody>.center-box>.fr>span{
+		font-size: 14px;
+	}
+	#goodsbody>.center-box>.fr>span>a{
+		margin-left: 100px;
+		color: #000;
+	}
+	#goodsbody>.center-box>.fr>i{
+		position: relative;
+		margin-bottom: 12px;
+	}
+	#goodsbody>.center-box>.fr>i>img{
+		width: 20px;
+		height: 20px;
+		margin: 12px 0;
+	}
+	#goodsbody>.center-box>.fr>i:hover div{
+		display: block;
+	}
+	#goodsbody>.center-box>.fr>i>div{
+		position: absolute;
+		width: 172px;
+		height: 55px;
+		top: -3px;
+		left: -2px;
+		display: none;
+	}
+	#goodsbody>.center-box>.fr>i a{
+		display: block;
+		width: 172px;
+		height: 43px;
+		line-height: 43px;
+		border: 1px solid #000;
+		text-align: center;
+		font-size: 14px;
+		color: #000;
+		background-color: #fff;
+		font-weight: bold;
+		position: absolute;
+		left: -77px;
+		top: -77px;
+	}
+	#goodsbody>.center-box>.fr>i>div>img{
+		position: absolute;
+		left: -4px;
+		top: -33px;
+	}
+	.buy>a{
+		display: inline-block;
+		height: 52px;
+		line-height: 52px;
+		border: 2px solid #000;
+		width: 162px;
+		text-align: center;
+		font-size: 20px;
+		font-weight: 400;
+	}
+	.buy>a:first-child{
+		background-color: #000;
+		color: #fff;
+	}
+	.buy>a:last-child{
+		color: #000;
+	}
+	#goodsbody>.center-box>.fr>.danbao{
+		padding:0;
+		background:  url(img/web_xiangqu.png) 0 0 no-repeat;
+		-webkit-background-size: 28px 24px;
+		background-size: 28px 24px;
+		border: none;
+		font-size: 12px;
+		width: 120px;
+		margin: 12px 0;
+	}
+	#goodsbody>.center-box>.fr>.danbao:hover{
+		border: none;
+		text-decoration: underline;
+	}
+	#goodsbody>.center-box>.fr>.help{
+		width: 340px;
+		height: 90px;
+	}
+	.help{
+		background-color: #fff;
+	}
+	.help>img{
+		width: 70px;
+		height: 70px;
+		padding: 9px;
+	}
+	#goodsbody>.center-box>.fr>.help>span{
+		float: right;
+		width: 230px!important;
+		border: none!important;
+		font-size: 12px!important;
+		color: #717171!important;
+		padding: 12px 20px 12px 0;
+	}
+	#Recommend>.center-box{
+		border: 1px solid #717177;
+		background-color: #fff;
+		height: 212px;
+		padding: 20px;
+	}
+	#Recommend>.center-box>h3{
+		margin-bottom: 30px;
+		font-size: 16px;
+		line-height: 31px;
+	}
+	#Recommend>.center-box>ul{
+		position: relative;
+	}
+	#Recommend>.center-box>ul>li{
+		float: left;
+		width: 140px;
+		height: 140px;
+		margin-right: 23px;
+		position: relative;
+	}
+	#Recommend>.center-box>ul>li>a>img{
+		width: 140px;
+		height: 140px;
+	}
+	#Recommend>.center-box>ul>li>div{
+		border-radius: 10px;
+		background: rgba(255,255,255,0.8) url(img/ico.png) 6px -70px no-repeat;
+		background-color: ;
+		width: 72px;
+		font-size: 14px;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		cursor: pointer;
+		display: none;
+	}
+	#Recommend>.center-box>ul>li>div:hover{
+		background:  rgba(255,255,255,0.8) url(img/ico.png) 6px -108px no-repeat;
+	}
+	#Recommend>.center-box>ul>li:hover div{
+		display: block;
+	}
+	#Recommend>.center-box>ul>li>div>p{
+		padding-left: 40px;
+	}
+	#Recommend>.center-box>ul>a{
+		display: block;
+		width: 32px;
+		height: 32px;
+		margin-top: -16px;
+		background:  url(img/detail_icon_0428.png) 0 0 no-repeat;
+		position: absolute;
+		top: 50%;
+		display: none;
+	}
+	#Recommend>.center-box>ul:hover a{
+		display: block;
+	}
+	#pinglun>.center-box{
+		padding: 20px 0;
+		margin-bottom: 30px;
+		border: 1px solid #fcfcfc;
+		background-color: #fff;
+	}
+	#pinglun>.center-box>ul{
+		height: 40px;
+		margin-bottom: 24px;
+		border-bottom: 2px solid #e5e5e5;
+	}
+	#pinglun>.center-box>ul>li{
+		float: left;
+		width: 110px;
+		height: 40px;	
+	}
+	#pinglun>.center-box>ul>li>a{
+		display: block;
+		width: 100px;
+		height: 30px;
+		padding: 0;
+		text-align: center;
+		color: #000;
+		border-right: 1px solid #ccc;
+		font-size: 16px;
+		font-weight: 700;
+	}
+	#pinglun>.center-box>ul>li>a:hover,#pinglun>.center-box>ul>li>.active{
+		border-bottom: 5px solid #000;
+	}
+	#pinglun>.center-box>.box{
+		width: 750px;
+	}
+	#lover>.center-box{
+		border: 1px solid #7c7c7c;
+		background-color: #fff;
+		padding: 20px;
+		padding-right: 0;
+	}
+	#lover>.center-box>h3{
+		margin-bottom: 20px;
+		font-size: 16px;
+		font-weight: 700;
+	}
+	#lover>.center-box>ul>li{
+		float: left;
+		width: 60px;
+		height: 60px;
+		margin-right: 20px;
+		margin-bottom: 20px;
+		overflow: hidden;
+	}
+	#lover>.center-box>ul>li>a{
+		display: block;
+		width: 60px;
+		height: 60px;
+	}
+	#lover>.center-box>ul>li>a>img{
+		vertical-align: middle;
+		max-width: 55px;
+	}
+</style>
+<body style="background-color: #f9f9f9;">
+	<!-- 顶部 -->
+	<div id="head">
+		<div class="center-box head clearfix">
+			<div class="head-left fl">
+				<a href=""><img src="img/pc_logo2.jpg" alt=""></a>
+			</div>
+			<div class="head-right fr">
+				<ul class="clearfix">
+					<li><a href="">想去首页</a></li>
+					<li><a href="">登录</a></li>
+					<li><a href="">注册</a></li>
+					<li style="color: #333;">|</li>
+					<li><a href="" class="ds">设计师入驻</a></li>
+					<li style="color: #333;">|</li>
+					<li class="down">
+						<a href="">下载APP</a>
+						<i class="iconfont icon-xiasanjiao"></i>
+						<div class="ma">
+							<img src="img/FrPIlipUd8Wgy0WwQ81zE3L-_gim" alt="" style="width: 120px;height: 120px;">
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- 顶部导航 -->
+	<div id="top-nav">
+		<div class="center-box clearfix">
+			<div class="top-nav-left fl">
+				<ul class="clearfix">
+					<li style="margin-left: 0;padding-left: 0;background:none;"><a href="">首页</a></li>
+					<li><a href="" style="border-bottom: 2px solid black;">逛</a></li>
+					<li><a href="">限时购</a></li>
+					<li><a href="">设计师</a></li>
+					<li><a href="">小站</a></li>
+				</ul>
+			</div>
+			<div class="top-nav-right fr">
+				<input type="text" placeholder="搜索您感兴趣的品牌" class="input">
+				<input type="submit" class="btn">
+			</div>
+		</div>
+	</div>
+	<!-- 商品头 -->
+	<div id="goodshead">
+		<div class="center-box clearfix">
+			<div class="fl">
+				<a href=""><img src="img/FsCrXg2XEmdBOdaOyXto0muUc-Bq.jpg" alt=""></a>
+			</div>
+			<div class="fr">
+				<p><a href="">寻味地图香水</a></p>
+				<p><a href="">上海原创香水品牌</a></p>
+			</div>
+		</div>
+	</div>
+	<!-- 商品主体 -->
+	<div id="goodsbody">
+		<div class="center-box clearfix">
+			<div class="fl">
+				<div class="clearfix">
+					<a href="" class="fl"></a>
+					<span class="fl">543</span>
+				</div>
+			</div>
+			<div class="fr">
+				<h2>寻味地图香水 试用装全套小样 8只试管 全新首发</h2>
+				<table>
+					<tr>
+						<td>设计师</td>
+						<td>寻味地图香水</td>
+					</tr>
+					<tr>
+						<td>品牌</td>
+						<td>寻味地图香水</td>
+					</tr>
+				</table>
+				<p>净含量</p>
+				<a href="">5ml以下<div>√</div></a>
+				<p>颜色分类</p>
+				<a href="" style="width: 8em;">全套试用装8只<div>√</div></a>
+				<p>数量</p>
+				<div>
+					<a href="" style="border-right: none;">-</a>
+					<span>1</span>
+					<a href="" style="border-left: none;">+</a>
+					<span>库存29件</span>
+				</div>
+				<h3>
+					<span>￥68.00</span>
+					<span>￥88.00</span>
+				</h3>
+				<span>
+					<span>包邮</span>
+					<a href=""><i><img src="img/QQ截图20170413152132.png" alt=""></i>联系卖家</a>
+				</span><br>
+				<i><img src="img/FhdHHKla7vofq2V-YbsYW7xOez-O" alt="">
+					<div>
+						<a href="">想去限时购</a>
+						<img src="img/activityArrow.png" alt="">
+					</div>
+				</i>
+				<p class="buy">
+					<a href="">立即购买</a>
+					<a href="">加入购物车</a>
+				</p>
+				<a href="" class="danbao">担保交易</a>
+				<div class="help">
+					<img src="img/siqi767-weixin.jpg" alt="">
+					<span>加想去君微信：siqi767，成为本君好友，超多朋友福利，带你认识更多设计师哦～</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 同类推荐 -->
+	<div id="Recommend">
+		<div class="center-box">
+			<h3>同类推荐</h3>
+			<ul class="clearfix">
+				<li>
+					<a href=""><img src="img/Fjmqev54IDyoTb0lkpdG8OlxrGXP.jpg" alt=""></a>
+					<div><p>喜欢</p></div>
+				</li>
+				<li>
+					<a href=""><img src="img/Fjmqev54IDyoTb0lkpdG8OlxrGXP.jpg" alt=""></a>
+					<div><p>喜欢</p></div>
+				</li>
+				<li>
+					<a href=""><img src="img/Fjmqev54IDyoTb0lkpdG8OlxrGXP.jpg" alt=""></a>
+					<div><p>喜欢</p></div>
+				</li>
+				<li>
+					<a href=""><img src="img/Fjmqev54IDyoTb0lkpdG8OlxrGXP.jpg" alt=""></a>
+					<div><p>喜欢</p></div>
+				</li>
+				<li>
+					<a href=""><img src="img/Fjmqev54IDyoTb0lkpdG8OlxrGXP.jpg" alt=""></a>
+					<div><p>喜欢</p></div>
+				</li>
+				<li>
+					<a href=""><img src="img/Fjmqev54IDyoTb0lkpdG8OlxrGXP.jpg" alt=""></a>
+					<div><p>喜欢</p></div>
+				</li>
+				<a href="" style="left: -10px;background-position: 0 -100px;"></a>
+				<a href="" style="right: -10px;background-position: 0 -140px;"></a>
+			</ul>
+		</div>
+	</div>
+	<!-- 评价 -->
+	<div id="pinglun">
+		<div class="center-box">
+			<ul class="clearfix">
+				<li><a href="" class="active">商品描述</a></li>
+				<li><a href="">评论（46）</a></li>
+			</ul>
+			<div class="box">
+				<img src="img/FqaPUe3v6P6DKuJ7lrl2gJr2iGpC.jpg" alt="">
+				<img src="img/FqaPUe3v6P6DKuJ7lrl2gJr2iGpC.jpg" alt="">
+				<img src="img/FqaPUe3v6P6DKuJ7lrl2gJr2iGpC.jpg" alt="">
+				<img src="img/FqaPUe3v6P6DKuJ7lrl2gJr2iGpC.jpg" alt="">
+				<img src="img/FqaPUe3v6P6DKuJ7lrl2gJr2iGpC.jpg" alt="">
+				<img src="img/FqaPUe3v6P6DKuJ7lrl2gJr2iGpC.jpg" alt="">
+				<img src="img/FqaPUe3v6P6DKuJ7lrl2gJr2iGpC.jpg" alt="">
+			</div>
+		</div>
+	</div>
+	<!-- 喜欢该商品的人 -->
+	<div id="lover">
+		<div class="center-box">
+			<h3>喜欢该商品的人</h3>
+			<ul class="clearfix">
+				<li><a href=""><img src="img/FuJoH_dkpDmI6_6SKbXPjxXd4_oy.jpg" alt=""></a></li>
+				<li><a href=""><img src="img/FuJoH_dkpDmI6_6SKbXPjxXd4_oy.jpg" alt=""></a></li>
+				<li><a href=""><img src="img/FuJoH_dkpDmI6_6SKbXPjxXd4_oy.jpg" alt=""></a></li>
+				<li><a href=""><img src="img/FuJoH_dkpDmI6_6SKbXPjxXd4_oy.jpg" alt=""></a></li>
+				<li><a href=""><img src="img/FuJoH_dkpDmI6_6SKbXPjxXd4_oy.jpg" alt=""></a></li>
+				<li><a href=""><img src="img/FuJoH_dkpDmI6_6SKbXPjxXd4_oy.jpg" alt=""></a></li>
+				<li><a href=""><img src="img/FuJoH_dkpDmI6_6SKbXPjxXd4_oy.jpg" alt=""></a></li>
+				<li><a href=""><img src="img/FuJoH_dkpDmI6_6SKbXPjxXd4_oy.jpg" alt=""></a></li>
+				<li><a href=""><img src="img/FuJoH_dkpDmI6_6SKbXPjxXd4_oy.jpg" alt=""></a></li>
+				<li><a href=""><img src="img/FuJoH_dkpDmI6_6SKbXPjxXd4_oy.jpg" alt=""></a></li>
+				<li><a href=""><img src="img/FuJoH_dkpDmI6_6SKbXPjxXd4_oy.jpg" alt=""></a></li>
+				<li><a href=""><img src="img/FuJoH_dkpDmI6_6SKbXPjxXd4_oy.jpg" alt=""></a></li>
+				<li><a href=""><img src="img/FuJoH_dkpDmI6_6SKbXPjxXd4_oy.jpg" alt=""></a></li>
+				<li><a href=""><img src="img/FuJoH_dkpDmI6_6SKbXPjxXd4_oy.jpg" alt=""></a></li>
+				<li><a href=""><img src="img/FuJoH_dkpDmI6_6SKbXPjxXd4_oy.jpg" alt=""></a></li>
+				<li><a href=""><img src="img/FuJoH_dkpDmI6_6SKbXPjxXd4_oy.jpg" alt=""></a></li>
+				<li><a href=""><img src="img/FuJoH_dkpDmI6_6SKbXPjxXd4_oy.jpg" alt=""></a></li>
+				<li><a href=""><img src="img/FuJoH_dkpDmI6_6SKbXPjxXd4_oy.jpg" alt=""></a></li>
+				<li><a href=""><img src="img/FuJoH_dkpDmI6_6SKbXPjxXd4_oy.jpg" alt=""></a></li>
+				<li><a href=""><img src="img/FuJoH_dkpDmI6_6SKbXPjxXd4_oy.jpg" alt=""></a></li>
+				<li><a href=""><img src="img/FuJoH_dkpDmI6_6SKbXPjxXd4_oy.jpg" alt=""></a></li>
+				<li><a href=""><img src="img/FuJoH_dkpDmI6_6SKbXPjxXd4_oy.jpg" alt=""></a></li>
+				<li><a href=""><img src="img/FuJoH_dkpDmI6_6SKbXPjxXd4_oy.jpg" alt=""></a></li>
+				<li><a href=""><img src="img/FuJoH_dkpDmI6_6SKbXPjxXd4_oy.jpg" alt=""></a></li>
+			</ul>
+		</div>
+	</div>
+		<!-- 底部 -->
+	<div id="foot">
+		<div class="center-box">
+			<div class="ruzhu">
+				<a href=""></a>
+			</div>
+			<div class="mingyan">
+				<p style="font-size: 18px;color: #fff;text-align: left;">“在设计界谈理想一直是我的理想。”</p>
+				<p style="font-size: 14px;color: #fff;text-align: right;padding: 25px 0 0;">by 田中一光</p>
+			</div>
+			<div class="copyright">
+				<span>
+					<a href="" style="color: #808285;"><i style="background: 
+					url(img/ico_common.png) -224px -5944px no-repeat"></i>新浪微博</a>
+					<a href=""  style="color: #808285;"><i></i>豆瓣小站</a>
+					<a href=""  style="color: #808285;"><i style="background: 
+					url(img/ico_common.png) -228px -6016px no-repeat"></i>人人小站</a>
+					<span style="color:  #808285;">Copyright 2017 版权所有 xiangqu.com 浙ICP备12027496</span>	
+				</span>
+				<a href=""  style="color: #808285;">热门精选</a>
+				<a href="" style="color: #808285;">热门精选</a>
+			</div>
+			<div class="friend-link">
+				<a href="">关于我们</a>
+				<a href="">联系我们</a>
+				<a href="">用户帮助</a>
+				<a href="">商务合作</a>
+				<span style="color: #808288;">友情链接：</span>
+				<a href="">想去网</a>
+				<a href="">手机想去</a>
+				<a href="">想去限时购</a>
+				<a href="">爱团购</a>
+				<a href="">更多...</a>
+			</div>
+			<div style="margin-top: 5px;text-align: center;padding-bottom: 5px;">
+				<a href="" style="color: #484848;"><img src="img/FinEALw7ifYIV2baxOAzDe1ctz1S" alt="" style="width: 15px;margin-right: 5px;">浙公网安备 33010602001965号</a>
+			</div>
+		</div>
+	</div>
+	<!-- 浮动框 -->
+	<div id="fudongkuang">
+		<a href=""></a>
+		<i>
+			<a href=""></a>
+		</i>
+		<p>想去APP下载</p>
+		<em></em>
+	</div>
+	<div id="suggest">
+		<a href=""></a>		
+		<a href=""></a>
+	</div>
+</body>
+</html>
